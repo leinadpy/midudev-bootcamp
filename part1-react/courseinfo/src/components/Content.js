@@ -1,10 +1,14 @@
 import React from "react";
 
-const Content = ({ part, exercises }) => {
+const Content = ({ parts }) => {
   return (
-    <p>
-      {part} {exercises}
-    </p>
+    <>
+      {parts.map((part, index) => (
+        <p key={index}>
+          {part.name} {part.exercises}
+        </p>
+      ))}
+    </>
   );
 };
 
